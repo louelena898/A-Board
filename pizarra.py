@@ -62,6 +62,10 @@ def cambiar_blanco():
     global color_inicial
     color_inicial = "white"
 
+def borrador():
+    global color_inicial
+    color_inicial = "darkgreen"
+
 def limpiar_pantalla():
     canvas.delete("all")
 
@@ -124,6 +128,9 @@ btn_blanco.pack(side=tk.LEFT, padx=5)
 
 btn_limpiar = tk.Button(barra_herramientas, text="Limpiar Todo", command=limpiar_pantalla)
 btn_limpiar.pack(side=tk.RIGHT, padx=5)
+
+btn_borrador = tk.Button(barra_herramientas, text="Borrador", command=borrador)
+btn_borrador.pack(side=tk.RIGHT, padx=5)
 
 btn_generar = tk.Button(barra_herramientas, text="Guardar PNG", command=guardar_imagen)
 btn_generar.pack(side=tk.RIGHT, padx=5)
