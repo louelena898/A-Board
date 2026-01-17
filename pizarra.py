@@ -56,7 +56,7 @@ def cambiar_azul():
 
 def cambiar_morado():
     global color_inicial
-    color_inicial = "medium purple"
+    color_inicial = "mediumpurple"
 
 def cambiar_blanco():
     global color_inicial
