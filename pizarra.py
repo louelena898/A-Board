@@ -69,6 +69,10 @@ def borrador():
 def limpiar_pantalla():
     canvas.delete("all")
 
+    global imagen_pil, draw
+    imagen_pil = Image.new("RGB", (1500, 800), "darkgreen")
+    draw = ImageDraw.Draw(imagen_pil)
+
 def guardar_imagen():
     try:
         nombre_archivo = "mi_dibujo_A-Board.png"
@@ -98,7 +102,7 @@ root.title("A-Board")
 logo = tk.PhotoImage(file='imagenes/A-Board_Logo.png')
 root.iconphoto(False, logo)
 
-canvas = tk.Canvas(root, bg="dark green", width=1500, height=800)
+canvas = tk.Canvas(root, bg="dark green", width=1500, height=700)
 canvas.pack()
 
 barra_herramientas = tk.Frame(root, bg="lightgray", pady=5)
@@ -142,4 +146,4 @@ canvas.bind("<B1-Motion>", pintar)
 
 root.mainloop()
 
-# Gracias por usar este programa. Atte. Lourdes :)
+# Gracias por usar este programa. Atte. Lourdes :) 
